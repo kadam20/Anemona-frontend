@@ -1,0 +1,174 @@
+<div class="flex flex-col gap-5">
+    <!-- Welcome Section -->
+    <section
+      class="flex items-center h-[80vh] w-full p-20 home-background article-image justify-center sm:justify-start"
+    >
+      <div
+        pAnimateOnScroll
+        enterClass="animate-enter fade-in-10 animate-duration-1000"
+        class="home-main-content w-[90%] sm:w-[70%] p-20 rounded-2xl flex flex-col gap-5 sm:gap-10"
+        >
+        <h1
+          class="text-3xl text-center sm:text-5xl sm:text-start lg:text-7xl xl:text-8xl"
+        >
+          Fedezd fel az <strong>Anemona</strong> Kertet!
+        </h1>
+       
+        <strong
+          class="text-center sm:text-xl sm:text-start lg:text-2xl xl:text-3xl italic"
+        >
+          A hely, ahol a szépség és tudatosság találkozik
+        </strong>
+        <div class="hidden sm:flex gap-3">
+          <p-button
+            [routerLink]="routeEnum.ABOUT"
+            severity="info"
+            label="Lépj Kapcsolatba"
+          />
+          <p-button
+            [routerLink]="routeEnum.VISIT"
+            label="Foglalj Időpontot"
+          />
+        </div>
+        <div class="flex gap-3 sm:hidden justify-center">
+          <p-button [routerLink]="routeEnum.BLOG" severity="info" label="Blog" />
+          <p-button [routerLink]="routeEnum.VISIT" label="Időpont" />
+        </div>
+      </div>
+    </section>
+  
+    <!-- Blog Section -->
+    <section class="w-full">
+      <div class="flex flex-col p-20 gap-20">
+        <h2
+          pAnimateOnScroll
+          enterClass="animate-enter fade-in-10 animate-duration-1000"
+          class="text-center text-4xl sm:text-start lg:text-5xl xl:text-6xl"
+        >
+          Ismerd meg a <strong>Blog</strong> posztjaimat!
+        </h2>
+        <div
+          class="mb-4 p-8 flex items-center justify-center gap-10 flex-col sm:flex-row"
+        >
+          @for(post of blogPosts; track post){
+          <p-card
+            pAnimateOnScroll
+            enterClass="animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000"
+          >
+            <ng-template #header>
+              <img
+                [alt]="post.title"
+                class="w-full h-[300px] article-image"
+                [src]="post.imageUrl"
+              />
+            </ng-template>
+            <ng-template #title>
+              <p class="truncate">{{ post.title }}</p>
+            </ng-template>
+            <p class="block sm:hidden lg:block">
+              {{ post.teaser }}
+            </p>
+            <ng-template #footer>
+              <div class="flex gap-4 mt-1">
+                <p-button label="Elolvasom" severity="info" />
+              </div>
+            </ng-template>
+          </p-card>
+          }
+        </div>
+      </div>
+    </section>
+  
+    <!-- Creator Section -->
+    <section class="inverse">
+      <div class="flex flex-col p-20 gap-20">
+        <h2
+          pAnimateOnScroll
+          enterClass="animate-enter fade-in-10 animate-duration-1000"
+          class="text-center text-4xl sm:text-start lg:text-5xl xl:text-6xl"
+        >
+          Kik állnak a kert mögött?
+        </h2>
+        <div class="mb-4 p-8 grid gap-10 grid-cols-1 lg:grid-cols-2">
+          @for(creator of creators; track creator){
+          <div
+            pAnimateOnScroll
+            enterClass="animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000"
+            class="flex flex-col gap-8 sm:flex-row"
+          >
+            <img
+              [src]="creator.imageUrl"
+              class="article-image h-[30rem] rounded-2xl sm:h-[20rem]"
+              [alt]="creator.name"
+            />
+            <span class="flex flex-col gap-5">
+              <h2 class="text-4xl">{{ creator.name }}</h2>
+              <p>{{ creator.description }}</p>
+            </span>
+          </div>
+          }
+        </div>
+      </div>
+    </section>
+  
+    <!-- Visit Section -->
+    <section>
+      <div class="flex flex-col p-20 gap-5">
+        <h2
+          pAnimateOnScroll
+          enterClass="animate-enter fade-in-10 animate-duration-1000"
+          class="text-center text-4xl sm:text-start lg:text-5xl xl:text-6xl"
+        >
+          Látogasd meg az <strong>Anemona</strong> kertet!
+        </h2>
+        <div
+          class="mb-4 p-8 flex items-center justify-center gap-10 h-full flex-col lg:flex-row"
+        >
+          @for(event of events; track event){
+          <p-card
+            pAnimateOnScroll
+            enterClass="animate-enter fade-in-10 slide-in-from-b-20 animate-duration-1000"
+            class="w-full"
+          >
+            <ng-template #title>
+              <h2>{{ event.title }}</h2>
+            </ng-template>
+            <div class="flex flex-col gap-1 lg:h-[120px]">
+              <p><strong>Dátum</strong>: {{ event.date }} <br /></p>
+              <p><strong>Helyszín</strong>: {{ event.location }} <br /></p>
+              <p><strong>Leírás</strong>: {{ event.description }}</p>
+            </div>
+            <p-avatar-group class="mt-5">
+              @for(attendee of event.attendees; track attendee){
+              <p-avatar
+                icon="pi pi-user"
+                [shape]="'circle'"
+                [size]="'large'"
+              ></p-avatar>
+              }
+            </p-avatar-group>
+  
+            <ng-template #footer>
+              <div class="flex gap-4 mt-1">
+                <p-button
+                  label="Jelentkezem"
+                  class="w-full"
+                  severity="info"
+                  styleClass="w-full"
+                />
+              </div>
+            </ng-template>
+          </p-card>
+          }
+        </div>
+      </div>
+    </section>
+  
+    <!-- Footer Section -->
+    <div class="inverse h-[4rem] flex items-center justify-center">
+      Szerzői jog Anemona-kert © 2025 Az oldalon megjelenő tartalmak másolása
+      kizárólag a szerző engedélyével történhet.
+    </div>
+  </div>
+  <p-scrolltop />
+  

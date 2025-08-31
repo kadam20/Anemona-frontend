@@ -1,12 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@use './tailwind.css';
 @import "primeicons/primeicons.css";
-@layer tailwind-base, primeng, tailwind-utilities;
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
-@layer tailwind-base {
-@tailwind base;
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html {
+  font-size: 16px;
+  background: var(--p-primary-100);
+  color: var(--p-primary-700);
+  font-family: "Playfair Display", serif;
 }
 
-@layer tailwind-utilities {
-@tailwind components;
-@tailwind utilities;
+.card {
+  background: var(--p-primary-50);
+}
+
+.text-highlight {
+  color: var(--p-primary-green);
+  font-weight: 600;
+}
+
+:root {
+  --p-button-info-background: var(--p-green-800) !important;
+  --p-button-info-hover-background	: var(--p-green-700) !important;
+  --p-button-info-border-color	: var(--p-green-800) !important;
+  --p-button-info-hover-border-color  : var(--p-green-700) !important;
+  --p-button-info-color	: var(--p-neutral-50) !important;
+  --p-button-info-hover-color	: var(--p-neutral-50) !important;
+  --p-button-info-active-background	: var(--p-green-800) !important;
+  --p-button-info-active-border-color	: var(--p-green-800) !important;
 }
