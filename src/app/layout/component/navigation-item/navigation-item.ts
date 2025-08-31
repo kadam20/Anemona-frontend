@@ -9,22 +9,23 @@ import { RouterLink } from '@angular/router';
   imports: [Button, Tooltip, RouterLink],
   template: `
     <p-button
-            [class.w-full]="isMobile()"
-            [text]="true"
-            [tooltipPosition]="'bottom'"
-            positionTop="12"
-            [pTooltip]="isMobile() ? '' : title()"
-            [label]="!isMobile() ? '' : title()"
-            [styleClass]="
-                (isMobile() ? '!w-full space-x-1.5 justify-start' : '!w-12') +
-                ' !h-12 text-left whitespace-nowrap'
-            "
-            [icon]="icon()"
-            [routerLink]="route() ?? undefined"
-            (click)="saveRoute.emit(route()!)"
-            [attr.aria-label]="title()"
-            data-cy="sidebar-navigation-item" />
-  `
+      [class.w-full]="isMobile()"
+      [text]="true"
+      [tooltipPosition]="'bottom'"
+      positionTop="12"
+      [pTooltip]="isMobile() ? '' : title()"
+      [label]="!isMobile() ? '' : title()"
+      [styleClass]="
+        (isMobile() ? '!w-full space-x-1.5 justify-start' : '!w-12') +
+        ' !h-12 text-left whitespace-nowrap'
+      "
+      [icon]="icon()"
+      [routerLink]="route() ?? undefined"
+      (click)="saveRoute.emit(route()!)"
+      [attr.aria-label]="title()"
+      data-cy="sidebar-navigation-item"
+    />
+  `,
 })
 export class NavigationItem {
   readonly saveRoute = output<RouteEnum>();

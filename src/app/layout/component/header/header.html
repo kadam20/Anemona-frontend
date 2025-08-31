@@ -1,29 +1,29 @@
 <div class="flex flex-row justify-between px-8 py-3 items-center card h-[4rem]">
-    <!-- Page Title -->
-    <div class="text-primary text-l font-bold flex items-center">
-      <i class="bi bi-flower1 text-xl mr-2"></i>
-      Anemona Kert
-    </div>
-  
-    <!-- Page Navigation -->
-    <div class="flex flex-row gap-5">
-      <!-- Shrunk Navigation -->
-      <div class="flex md:hidden gap-3 items-center">
-        <app-external-navigation></app-external-navigation>
-        <p-button
-          class="ml-5"
-          [icon]="hamburgerMenu.overlayVisible ? 'pi pi-times' : 'pi pi-bars'"
-          (click)="hamburgerMenu.toggle($event)"
-          text="true"
-          rounded="true"
-        />
-        <p-popover
-          #hamburgerMenu
-          [appendTo]="'body'"
-          styleClass="left-0 right-0 mt-5 rounded-t-none after:hidden before:hidden"
-        >
-          <div class="flex flex-col">
-            @for (item of internalRoutes; track item) {
+  <!-- Page Title -->
+  <div class="text-primary text-l font-bold flex items-center">
+    <i class="bi bi-flower1 text-xl mr-2"></i>
+    Anemona Kert
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="flex flex-row gap-5">
+    <!-- Shrunk Navigation -->
+    <div class="flex md:hidden gap-3 items-center">
+      <app-external-navigation></app-external-navigation>
+      <p-button
+        class="ml-5"
+        [icon]="hamburgerMenu.overlayVisible ? 'pi pi-times' : 'pi pi-bars'"
+        (click)="hamburgerMenu.toggle($event)"
+        text="true"
+        rounded="true"
+      />
+      <p-popover
+        #hamburgerMenu
+        [appendTo]="'body'"
+        styleClass="left-0 right-0 mt-5 rounded-t-none after:hidden before:hidden"
+      >
+        <div class="flex flex-col">
+          @for (item of internalRoutes; track item) {
             <app-navigation-item
               [isMobile]="true"
               [title]="item.label"
@@ -32,20 +32,20 @@
               (click)="hamburgerMenu.toggle($event)"
               (saveRoute)="saveRoute($event)"
             ></app-navigation-item>
-            }
-          </div>
-        </p-popover>
-        <p-button
-          [icon]="isDarkMode() ? 'pi pi-moon' : 'pi pi-sun'"
-          [rounded]="true"
-          [text]="true"
-          (click)="toggleDarkMode()"
-        />
-      </div>
-  
-      <!-- Full Navigation -->
-      <div class="hidden md:flex items-center gap-10">
-        @for (item of internalRoutes; track item) {
+          }
+        </div>
+      </p-popover>
+      <p-button
+        [icon]="isDarkMode() ? 'pi pi-moon' : 'pi pi-sun'"
+        [rounded]="true"
+        [text]="true"
+        (click)="toggleDarkMode()"
+      />
+    </div>
+
+    <!-- Full Navigation -->
+    <div class="hidden md:flex items-center gap-10">
+      @for (item of internalRoutes; track item) {
         <app-navigation-item
           [isMobile]="false"
           [title]="item.label"
@@ -53,17 +53,16 @@
           [route]="item.route"
           (saveRoute)="saveRoute($event)"
         ></app-navigation-item>
-        } 
-        <span>|</span>
-        <app-external-navigation></app-external-navigation>
-        <span>|</span>
-        <p-button
-          [icon]="isDarkMode() ? 'pi pi-moon' : 'pi pi-sun'"
-          [rounded]="true"
-          [text]="true"
-          (click)="toggleDarkMode()"
-        />
-      </div>
+      }
+      <span>|</span>
+      <app-external-navigation></app-external-navigation>
+      <span>|</span>
+      <p-button
+        [icon]="isDarkMode() ? 'pi pi-moon' : 'pi pi-sun'"
+        [rounded]="true"
+        [text]="true"
+        (click)="toggleDarkMode()"
+      />
     </div>
   </div>
-  
+</div>

@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
+import { Contact } from './pages/contact/contact';
 
 export const routes: Routes = [
   {
@@ -7,25 +8,25 @@ export const routes: Routes = [
     title: 'Home',
     component: Home,
   },
-//   {
-//     path: 'blog',
-//     title: 'Blog',
-//     component: BlogComponent,
-//   },
-//   {
-//     path: 'shop',
-//     title: 'Shop',
-//     component: ShopComponent,
-//   },
-//   {
-//     path: 'visit',
-//     title: 'Visit',
-//     component: VisitComponent,
-//   },
-//   {
-//     path: 'about',
-//     title: 'About',
-//     component: AboutComponent,
-//   },
+  //   {
+  //     path: 'blog',
+  //     title: 'Blog',
+  //     component: BlogComponent,
+  //   },
+  //   {
+  //     path: 'shop',
+  //     title: 'Shop',
+  //     component: ShopComponent,
+  //   },
+  //   {
+  //     path: 'visit',
+  //     title: 'Visit',
+  //     component: VisitComponent,
+  //   },
+  {
+    path: 'contact',
+    title: 'Contact',
+    component: Contact,
+  },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

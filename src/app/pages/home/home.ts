@@ -12,7 +12,7 @@ import { AnimateOnScroll } from 'primeng/animateonscroll';
   selector: 'app-home',
   imports: [Button, RouterLink, Card, Avatar, AvatarGroup, ScrollTop, AnimateOnScroll],
   templateUrl: './home.html',
-  styleUrl: './home.scss'
+  styleUrl: './home.scss',
 })
 export class Home {
   routeEnum = RouteEnum;
@@ -21,22 +21,22 @@ export class Home {
       title: 'Kertlátogatás',
       teaser:
         'Fedezd fel, hogyan kezdheted a napot energikusan és pozitívan ezekkel az egyszerű, de hatékony tippekkel!',
-        imageUrl: '/assets/images/Flower-1.jpg',
-        link: '/blog/kertlatogatas',
+      imageUrl: '/assets/images/Flower-1.jpg',
+      link: '/blog/kertlatogatas',
     },
     {
       title: 'A kert felépítése',
       teaser:
         'Ismerd meg a természetes módszereket a stressz csökkentésére és a lelki egyensúly megtartására!',
-        imageUrl: 'assets/images/Flower-2.jpg',
-        link: '/blog/kert-felepitese',
+      imageUrl: 'assets/images/Flower-2.jpg',
+      link: '/blog/kert-felepitese',
     },
     {
       title: 'A kert története',
       teaser:
         'Tanuld meg, hogyan választhatod ki a számodra legmegfelelőbb illóolajat a különböző igényekhez!',
-        imageUrl: 'assets/images/Flower-3.jpg',
-        link: '/blog/kert-tortenete',
+      imageUrl: 'assets/images/Flower-3.jpg',
+      link: '/blog/kert-tortenete',
     },
   ];
 

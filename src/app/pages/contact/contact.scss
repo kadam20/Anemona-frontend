@@ -1,0 +1,13 @@
+.home-background {
+    background-image: url('/assets/images/main.jpg');
+}
+
+.article-image {
+    background-size: cover;      
+    background-position: center;
+    object-fit: cover;
+}
+
+.home-main-content {
+    background-color: var(--p-surface-50);
+}

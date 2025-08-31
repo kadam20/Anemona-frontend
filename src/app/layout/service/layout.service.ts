@@ -7,7 +7,7 @@ export enum RouteEnum {
   VISIT = '/visit',
   SHOP = '/shop',
   BLOG = '/blog',
-  ABOUT = '/about',
+  CONTACT = '/contact',
 }
 
 @Injectable({
@@ -15,9 +15,9 @@ export enum RouteEnum {
 })
 export class LayoutService {
   localStorageService = inject(LocalstorageService);
-  currentRoute = signal<RouteEnum>(RouteEnum.HOME)
+  currentRoute = signal<RouteEnum>(RouteEnum.HOME);
   isDarkMode = signal<boolean>(false);
-  
+
   router: Router = inject(Router);
 
   constructor() {

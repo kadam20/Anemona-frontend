@@ -4,7 +4,7 @@ import { Component, inject } from '@angular/core';
 import { Button } from 'primeng/button';
 import { NavigationItem } from '../navigation-item/navigation-item';
 import { ExternalNavigation } from '../external-navigation/external-navigation';
-import { Popover} from 'primeng/popover';
+import { Popover } from 'primeng/popover';
 
 @Component({
   selector: 'app-header',
@@ -40,8 +40,8 @@ export class Header {
     },
     {
       icon: 'pi pi-user',
-      route: RouteEnum.ABOUT,
-      label: 'Rólunk',
+      route: RouteEnum.CONTACT,
+      label: 'Lépj Kapcsolatba Velünk',
     },
   ];
 

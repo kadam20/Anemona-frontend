@@ -17,10 +17,6 @@
     color: var(--p-neutral-50);
 }
 
-strong {
-    color: var(--p-green-800)
-}
-
 :host ::ng-deep {
     .p-avatar {
         border: 1px solid var(--p-green-800);
