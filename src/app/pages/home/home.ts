@@ -7,10 +7,11 @@ import { Avatar } from 'primeng/avatar';
 import { AvatarGroup } from 'primeng/avatargroup';
 import { ScrollTop } from 'primeng/scrolltop';
 import { AnimateOnScroll } from 'primeng/animateonscroll';
+import { Footer } from '../../layout/footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [Button, RouterLink, Card, Avatar, AvatarGroup, ScrollTop, AnimateOnScroll],
+  imports: [Button, RouterLink, Card, Avatar, AvatarGroup, ScrollTop, AnimateOnScroll, Footer],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

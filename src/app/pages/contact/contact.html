@@ -1,10 +1,12 @@
-<section class="flex items-center h-full w-full p-20 home-background article-image justify-center">
+<section
+  class="flex items-center h-full w-full p-5 sm:p-10 lg:p-20 home-background article-image justify-center"
+>
   <div
     pAnimateOnScroll
     enterClass="animate-enter fade-in-10 animate-duration-1000"
-    class="home-main-content w-[90%] h-[90%] p-20 rounded-2xl flex flex-col gap-5 sm:gap-10"
+    class="bg-[var(--p-surface-50)] p-20 rounded-2xl flex flex-col gap-5 sm:gap-10 w-[100%] sm:w-[80%]"
   >
-    <h1 class="text-3xl text-center sm:text-5xl sm:text-start lg:text-7xl xl:text-8xl">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl">
       Lépj velünk <strong>kapcsolatba</strong>!
     </h1>
     <form [formGroup]="contactFormGroup" class="flex flex-col gap-5">
@@ -28,7 +30,7 @@
         <label for="message">Üzenet</label>
       </p-floatlabel>
       <div class="flex gap-3 items-center justify-between">
-        <div class="flex gap-3 items-center">
+        <div class="flex gap-3 items-center hidden lg:flex">
           <i class="pi pi-home"></i>
           <span> Fejér megye, Székesfehérvár, Öreghegy</span>
           <i class="pi pi-envelope"></i>
@@ -39,9 +41,9 @@
             (click)="onSubmit()"
             severity="info"
             [disabled]="contactFormGroup.invalid"
-            label="Üzenet küldése"
+            label="Küldés"
           ></p-button>
-          <p-button [routerLink]="routeEnum.HOME" label="Vissza a Főoldalra"></p-button>
+          <p-button [routerLink]="routeEnum.HOME" label="Kezdőlap"></p-button>
         </div>
       </div>
     </form>

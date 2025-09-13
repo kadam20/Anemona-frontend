@@ -35,12 +35,6 @@
           }
         </div>
       </p-popover>
-      <p-button
-        [icon]="isDarkMode() ? 'pi pi-moon' : 'pi pi-sun'"
-        [rounded]="true"
-        [text]="true"
-        (click)="toggleDarkMode()"
-      />
     </div>
 
     <!-- Full Navigation -->
@@ -56,13 +50,6 @@
       }
       <span>|</span>
       <app-external-navigation></app-external-navigation>
-      <span>|</span>
-      <p-button
-        [icon]="isDarkMode() ? 'pi pi-moon' : 'pi pi-sun'"
-        [rounded]="true"
-        [text]="true"
-        (click)="toggleDarkMode()"
-      />
     </div>
   </div>
 </div>

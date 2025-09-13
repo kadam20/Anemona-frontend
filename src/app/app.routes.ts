@@ -1,18 +1,19 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { Contact } from './pages/contact/contact';
+import { Blog } from './pages/blog/blog';
 
 export const routes: Routes = [
   {
     path: '',
-    title: 'Home',
+    title: 'Kezdőlap',
     component: Home,
   },
-  //   {
-  //     path: 'blog',
-  //     title: 'Blog',
-  //     component: BlogComponent,
-  //   },
+  {
+    path: 'blog',
+    title: 'Blog',
+    component: Blog,
+  },
   //   {
   //     path: 'shop',
   //     title: 'Shop',
@@ -25,7 +26,7 @@ export const routes: Routes = [
   //   },
   {
     path: 'contact',
-    title: 'Contact',
+    title: 'Kontakt',
     component: Contact,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },

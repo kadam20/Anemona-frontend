@@ -32,4 +32,20 @@ strong {
   --p-button-info-hover-color	: var(--p-neutral-50) !important;
   --p-button-info-active-background	: var(--p-green-800) !important;
   --p-button-info-active-border-color	: var(--p-green-800) !important;
+  --p-tooltip-background: var(--p-green-800) !important;
+}
+
+.home-main-content {
+  background-color: var(--p-surface-50);
+}
+
+.article-image {
+  background-size: cover;      
+  background-position: center;
+  object-fit: cover;
+}
+
+.inverse {
+  background-color: var(--p-green-900);
+  color: var(--p-neutral-50);
 }

@@ -8,15 +8,6 @@
     object-fit: cover;
 }
 
-.home-main-content {
-    background-color: var(--p-surface-50);
-}
-
-.inverse {
-    background-color: var(--p-green-900);
-    color: var(--p-neutral-50);
-}
-
 :host ::ng-deep {
     .p-avatar {
         border: 1px solid var(--p-green-800);
